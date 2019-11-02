@@ -20,9 +20,9 @@ MLH - Tones of challenges - Domain.com, UI path, Twilio etc
 HS5 - top 3 hacks, funniest hack, spookiest hack, best tweet (#hacksheffield5)  
 
 ## Who wants to attend what? 
-Mini CTF - Maybe Tom, Grace :)  
-Slideshow karaoke - Maybe Tom, Grace :)  
-Artificial intelegance talk - Tom, Grace :)
+Mini CTF - Maybe Tom, Grace :)   James
+Slideshow karaoke - Maybe Tom, Grace :)  Maybe James
+Artificial intelegance talk - Tom, Grace :) James
 
 ## Demo-ing
 Science fair style!
