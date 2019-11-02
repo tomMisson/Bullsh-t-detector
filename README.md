@@ -3,7 +3,7 @@ Grace, James, Ilgin & Tom's HackSheffield project
 
 [HackSheffield Link](https://hacksheffield.co/)
 
-##Opening ceremony 
+## Opening ceremony 
 
 Teamwork is key!
 
