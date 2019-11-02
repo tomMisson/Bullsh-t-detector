@@ -50,3 +50,12 @@ input[type="submit"]{
 input[type="submit"]:hover{
   background-color: var(--accent);
 }
+
+section{
+  width:90%;
+  height:90%;
+  background-color: var(--accent);
+  margin: auto;
+  border-radius: 20px;
+  padding: 30px;
+}
