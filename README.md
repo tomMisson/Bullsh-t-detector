@@ -7,7 +7,7 @@ Grace, James, Ilgin & Tom's HackSheffield project
 
 Teamwork is key!
 
-[]Stick to time
-[]Dont over engineer
-[]Have fun
+[] Stick to time
+[] Dont over engineer
+[] Have fun
 
