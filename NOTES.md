@@ -1,5 +1,5 @@
-# HS5
-Grace, James, Ilgin & Tom's HackSheffield project
+# HS5 - Hack Sheffield 5
+Team: Grace, James, Ilgin & Tom
 
 [HackSheffield Link](https://hacksheffield.co/)  
 [Discord channel](https://discordapp.com/channels/579037853472784406/579038190929707050)  
@@ -8,6 +8,10 @@ Grace, James, Ilgin & Tom's HackSheffield project
 ## Opening ceremony 
 
 Teamwork is key!
+
+Initial Briefing  
+Something different, creativity  
+It’s about the concept not quality of code 
 
 [x] Stick to time  
 [x] Dont over engineer  
@@ -26,11 +30,9 @@ Artificial intelegance talk - Tom, Grace :) James
 
 ## Demo-ing
 Science fair style!
-
-## Grace's Notes
-Initial Briefing  
-Something different, creativity  
-It’s about the concept not quality of code  
+ 
+  
+## Timings
 12:00 Hacking  
 12:30 lunch  
 17:00 AI workshop  
@@ -43,6 +45,7 @@ It’s about the concept not quality of code
 12:00 Finish hacking  
 12:15 lunch  
 
+## General Notes
 Discord  
 hacksheffield.co/discord  
 
@@ -55,36 +58,40 @@ CapitalOne - change finance for good
 Small challenges  
 Tech help :)  
 Major League Hacking:  
-Hack.mlh.io  
-Official student hacking community  
-Capture the flag, web security  
-Slideshow karaoke - prizes  
-Duckie <3  
-Digi-Key hardware to borrow  
-/hardware  
-/learn  
-Draw an octocat # hack sheff 5  
-Best use of Google cloud  
-Best domain, fav domain name  
-Best use of UI pass  
-Best use of transposit  
-Best use of twilio  
-Speak to Eilidh for more details  
-I demoed - present everything, what learnt  
-MLH career lab  
-Code of conduct - READ  
-Eilidh tech support (Java/Python etc.)  
+ - Hack.mlh.io  
+ - Official student hacking community  
+ - Capture the flag, web security  
+ - Slideshow karaoke - prizes  
+ - Duckie <3  
+ - Digi-Key hardware to borrow  
+ - /hardware  
+ - /learn  
+ - Draw an octocat # hack sheff 5  
+ - Best use of Google cloud  
+ - Best domain, fav domain name  
+ - Best use of UI pass  
+ - Best use of transposit  
+ - Best use of twilio  
+ - Speak to Eilidh for more details  
+ - I demoed - present everything, what learnt  
+ - MLH career lab  
+ - Code of conduct - READ  
+ - Eilidh tech support (Java/Python etc.)  
+  
 SAIS:  
-Workshop  - what is neural networks etc  
+ - Workshop  - what is neural networks etc  
+ 
 Challenges:  
-Top 3 hacks  
-Funniest hack  
-Spookiest hack  
-Best tweet #hacksheffield5  
+ - Top 3 hacks  
+ - Funniest hack  
+ - Spookiest hack  
+ - Best tweet #hacksheffield5  
+  
 Lord Mayor:  
-Cool dude  
+ - Cool dude  
+  
 Presentation:  
-Table and laptop, 90 seconds  
+ - Table and laptop, 90 seconds  
 
 ## Installation for Python
 
