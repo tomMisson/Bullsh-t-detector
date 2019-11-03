@@ -11,7 +11,7 @@ from nltk.corpus import names
 def word_feats(words):
     return dict([(word, True) for word in words])
 
-f = open("../Dataset.txt", "r")
+f = open("./Dataset.txt", "r")
 
 positive=[]
 negative=[]
