@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class Result extends Component {
-        
+
     render() {
 
         if(this.props.url !==""){
@@ -23,7 +23,7 @@ export default class Result extends Component {
         else{
             return (
                 <div>
-                
+
                 </div>
             )
         }
