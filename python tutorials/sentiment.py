@@ -123,7 +123,8 @@ class MyClassifier(object):
             if classResult == 'pos':
                 pos = pos + 1
 
-        return {"positive": str(float(pos)/len(words)),
+        return {"text" : sentence,
+                "positive": str(float(pos)/len(words)),
                 "negative": str(float(neg)/len(words))}
 
 def word_feats(words):
