@@ -13,7 +13,7 @@ class App extends React.Component{
     if(this.state.url!=="")
     {
       console.log(this.state.url);
-      //fetch("url/"+this.state.url).then()
+      
     }
   }
 

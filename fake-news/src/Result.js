@@ -3,22 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 export default class Result extends Component {
-    
-    componentDidMount(){
-       if(this.props.url!==""){
-            axios(this.props.url)
-            .then(response => {
-            const html = response.data;
-            const $ = cheerio.load(html);
-            const statsTable = $('.statsTableContainer > tr');
-            console.log(statsTable.length);
-            })
-            .catch(console.error);
         
-        }
-    }
-     
-    
     render() {
 
         if(this.props.url !==""){
