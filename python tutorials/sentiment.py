@@ -37,11 +37,11 @@ for lines in neededLines:
     lines = lines.split(" ")
 
     if(lines[1]=="positive"):
-        pos.append(lines[1])
+        positive.append(lines[1])
     elif (lines[1] == "neutral"):
-        nut.append(lines[1])
+        neutral.append(lines[1])
     elif (lines[1] == "negative"):
-        neg.append(lines[1])
+        negative.append(lines[1])
 
 
 positive_vocab = positive
@@ -56,17 +56,23 @@ train_set = negative_features + positive_features + neutral_features
 classifier = NaiveBayesClassifier.train(train_set)
 
 # Predict
-neg = 0
-pos = 0
-sentence = input()
-sentence = sentence.lower()
-words = sentence.split(' ')
-for word in words:
-    classResult = classifier.classify( word_feats(word))
-    if classResult == 'neg':
-        neg = neg + 1
-    if classResult == 'pos':
-        pos = pos + 1
- 
-print('Positive: ' + str(float(pos)/len(words)))
-print('Negative: ' + str(float(neg)/len(words)))
+def sentiment(sentence):
+    neg = 0
+    pos = 0
+    neu = 0
+    sentence = sentence.lower()
+    words = sentence.split(' ')
+    for word in words:
+        classResult = classifier.classify( word_feats(word))
+        if classResult == 'neg':
+            neg = neg + 1
+        if classResult == 'pos':
+            pos = pos + 1
+        if classResult == 'neu':
+            neu = neu + 1
+    
+    #determines the percentage of bias for each type, from the bias per 
+    #total word count
+    print('Positive: ' + str(round(((float(pos)/len(words))*100), 1)) + "%")
+    print('Negative: ' + str(round(((float(neg)/len(words))*100), 1)) + "%")
+    print('Neutral: ' + str(round(((float(neu)/len(words))*100), 1)) + "%")
