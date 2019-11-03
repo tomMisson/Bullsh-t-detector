@@ -113,6 +113,7 @@ class MyClassifier(object):
         # Predict
         neg = 0
         pos = 0
+        neu = 0
 
         sentence = sentence.lower()
         words = sentence.split(' ')
@@ -122,9 +123,12 @@ class MyClassifier(object):
                 neg = neg + 1
             if classResult == 'pos':
                 pos = pos + 1
+            if classResult == 'neu':
+                neu = neu + 1
 
         return {"text" : sentence,
                 "positive": str(float(pos)/len(words)),
+                "neutral": str(float(neu)/len(words)),
                 "negative": str(float(neg)/len(words))}
 
 def word_feats(words):
