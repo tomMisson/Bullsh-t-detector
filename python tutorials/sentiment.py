@@ -8,6 +8,61 @@ import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import names
 
+#################################################
+# stuff from main.py for flask backend          #
+#################################################
+
+from flask import Flask, jsonify, request, abort
+from flask_restful import Api, Resource, reqparse
+import random
+import time
+
+app = Flask(__name__)
+
+url_list = [
+        {
+            "id" : 0,
+            "url" : "https://www.bbc.co.uk/news/uk-politics-50275383"
+            }
+]
+
+@app.route("/")
+def helloWorld():
+    return "Hello World\n"
+
+@app.route("/url/<idNum>", methods=["GET"])
+def getUrl(idNum):
+    # return jsonify(idNum)
+    # returnThing = sentiment(idNum)
+
+    return jsonify(sentiment(idNum))
+    # for item in url_list:
+        # if int(item["id"]) == int(idNum):
+            # return jsonify(item)
+    abort(404)
+
+@app.route("/url/", methods=["GET"])
+def getAllUrl():
+    return jsonify(url_list)
+
+@app.route("/url", methods=["POST"])
+def postUrl():
+    if not request.json or not 'url' in request.json:
+        abort(400)
+    # url = {
+            # "id" : len(url_list),
+            # "url":request.json['url']
+            # }
+    url = {
+            "id" : len(url_list),
+            "text" : request.json['url']
+            }
+    url_list.append(url)
+
+    return jsonify({'url': sentiment(url)}), 201
+
+#################################################
+
 def word_feats(words):
     return dict([(word, True) for word in words])
 
@@ -33,7 +88,7 @@ for line in f:
 positive_vocab = positive
 negative_vocab = negative
 neutral_vocab = neutral
- 
+
 positive_features = [(word_feats(pos), 'pos') for pos in positive_vocab]
 negative_features = [(word_feats(neg), 'neg') for neg in negative_vocab]
 neutral_features = [(word_feats(neu), 'neu') for neu in neutral_vocab]
@@ -56,9 +111,14 @@ def sentiment(sentence):
             pos = pos + 1
         if classResult == 'neu':
             neu = neu + 1
-    
-    #determines the percentage of bias for each type, from the bias per 
+
+    #determines the percentage of bias for each type, from the bias per
     #total word count
-    print('Positive: ' + str(round(((float(pos)/len(words))*100), 1)) + "%")
-    print('Negative: ' + str(round(((float(neg)/len(words))*100), 1)) + "%")
-    print('Neutral: ' + str(round(((float(neu)/len(words))*100), 1)) + "%")
+    positive = "positive: " + str(round(((float(pos)/len(words))*100), 1)) + "%"
+    negative = "negative: "+ str(round(((float(neg)/len(words))*100), 1)) + "%"
+    neutral = "neutral: " + str(round(((float(neu)/len(words))*100), 1)) + "%"
+
+    return (sentence, positive, negative, neutral)
+
+if __name__ == '__main__':
+    app.run(debug=True)
