@@ -86,5 +86,10 @@ Cool dude
 Presentation:  
 Table and laptop, 90 seconds  
 
+## Installation for Python
 
-test test
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
