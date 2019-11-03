@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-const axios = require('axios');
-const cheerio = require('cheerio');
+// const axios = require('axios');
+// const cheerio = require('cheerio');
 
 export default class Result extends Component {
-        
+
     render() {
 
         if(this.props.url !==""){
@@ -17,7 +17,7 @@ export default class Result extends Component {
         else{
             return (
                 <div>
-                
+
                 </div>
             )
         }
