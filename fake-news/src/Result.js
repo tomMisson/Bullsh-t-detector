@@ -8,7 +8,15 @@ export default class Result extends Component {
             return (
                 <section>
                     <h2><a href={this.props.url} alt="link to site" target= "_blank" rel="noopener noreferrer">{this.props.url}</a></h2>
-                    <h3></h3>
+                    
+                </section>
+            )
+        }
+        if(this.props.url === "Its fake news man")
+        {
+            return (
+                <section>
+                    <h1>{this.props.url}</h1>
                 </section>
             )
         }
