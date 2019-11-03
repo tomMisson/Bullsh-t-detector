@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-const axios = require('axios');
-const cheerio = require('cheerio');
 
 export default class Result extends Component {
         
