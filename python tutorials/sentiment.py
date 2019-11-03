@@ -127,9 +127,9 @@ class MyClassifier(object):
                 neu = neu + 1
 
         return {"text" : sentence,
-                "positive": str(float(pos)/len(words)),
-                "neutral": str(float(neu)/len(words)),
-                "negative": str(float(neg)/len(words))}
+                "positive": float(pos)/len(words),
+                "neutral": float(neu)/len(words),
+                "negative": float(neg)/len(words)}
 
 def word_feats(words):
     return dict([(word, True) for word in words])
