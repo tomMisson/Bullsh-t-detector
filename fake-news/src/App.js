@@ -8,22 +8,17 @@ class App extends React.Component{
     url:"",
     fake: false,
 
-    text:"",
-    negitive:0.0,
-    neutral:0.0,
-    positive:0.0
+    reliablity:{
+      text:"",
+      negitive:0.0,
+      neutral:0.0,
+      positive:0.0
+    }
   }
 
   collectURL = (event) => {
     if(!this.state.fake){
       this.setState({url:document.getElementById("textBox").value});
-
-
-      var url = "http://localhost:5000/url/"+this.state.url;
-      fetch(url)
-      .then(response => response.json())
-      .then( console.log(response)
-      )
     }
     else{
       this.setState({url:"Its fake news man"});
@@ -32,7 +27,17 @@ class App extends React.Component{
     
     if(this.state.url!=="")
     {
-      console.log(this.state.url);
+      var url = "/url/"+this.state.url;
+      console.log(url)
+      fetch(url, {
+        mode:"no-cors"
+      })
+      .then(res => 
+        res.json()
+      )
+      .then(data => this.setState({reliablity:data}))
+      .then(console.log(this.state.reliablity))
+      .catch(err => console.log(err))
     }
   }
  
@@ -53,9 +58,9 @@ class App extends React.Component{
         
             <input type="text" id="textBox" placeholder="Text to judge"/>
             <br/>
-            <input type="submit" onClick={this.collectURL}/>
+            <input type="submit" onClick={ this.collectURL}/>
         </main>
-        <Result url={this.state.url}/>
+        <Result url={this.state.url} reliablity={this.state.reliablity}/>
       </div>
     );
   }

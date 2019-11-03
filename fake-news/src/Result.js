@@ -7,8 +7,10 @@ export default class Result extends Component {
         if(this.props.url !==""){
             return (
                 <section>
-                    <h2><a href={this.props.url} alt="link to site" target= "_blank" rel="noopener noreferrer">{this.props.url}</a></h2>
-                    
+                    <h4>{this.props.url}</h4><br/>
+                    <p>Positive: {this.props.reliablity.positive}</p><br/>
+                    <p>Neutral: {this.props.reliablity.neutral}</p><br/>
+                    <p>Negative: {this.props.reliablity.negative}</p><br/>
                 </section>
             )
         }
