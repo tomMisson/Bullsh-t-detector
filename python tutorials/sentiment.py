@@ -41,6 +41,7 @@ neutral_features = [(word_feats(neu), 'neu') for neu in neutral_vocab]
 train_set = negative_features + positive_features + neutral_features
 classifier = NaiveBayesClassifier.train(train_set)
 
+# Predict
 def sentiment(sentence):
     neg = 0
     pos = 0
@@ -55,8 +56,8 @@ def sentiment(sentence):
             pos = pos + 1
         if classResult == 'neu':
             neu = neu + 1
-   
-    #determines the percentage of bias for each type, from the bias per
+    
+    #determines the percentage of bias for each type, from the bias per 
     #total word count
     print('Positive: ' + str(round(((float(pos)/len(words))*100), 1)) + "%")
     print('Negative: ' + str(round(((float(neg)/len(words))*100), 1)) + "%")
