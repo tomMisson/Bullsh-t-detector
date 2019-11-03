@@ -1,6 +1,7 @@
 f = open("../dataset.tff", "r")
 
 neededLines = []
+fileLines =[]
 pos=[]
 neg=[]
 nut=[]
@@ -22,6 +23,7 @@ for lines in neededLines:
     lines = lines[1] + " " + lines[3].replace("\n", '')
 
     lines = lines.split(" ")
+    fileLines.append(lines[0] + " " + lines[1])
 
     if(lines[1]=="positive"):
         pos.append(lines[1])
@@ -29,7 +31,13 @@ for lines in neededLines:
         nut.append(lines[1])
     elif (lines[1] == "negative"):
         neg.append(lines[1])
-    else:
+    
 
+f = open("Dataset.txt", "a")
+
+for lines in fileLines:
+    f.write(lines+"\n")
+
+f.close()
 
         
